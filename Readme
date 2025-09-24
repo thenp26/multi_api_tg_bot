@@ -1,0 +1,81 @@
+# 🤖 Private AI Gateway Bot for Telegram
+
+[![Python Version](https://img.shields.io/badge/Python-3.10%2B-blue)](https://www.python.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+A powerful, multi-provider Telegram bot that acts as your personal gateway to leading AI models like Gemini, GPT, and Claude. Bring your own API keys and switch between services seamlessly.
+
+## 🎯 The Problem This Solves
+
+Many public AI bots on Telegram come with limitations, ads, or require expensive subscriptions. If you're a developer with your own API keys, you're often forced to use separate bots for each service, with no control over your data or costs.
+
+This project was built out of a necessity to create a **single, private, and powerful interface** for all your AI needs. It puts you in control, allowing you to leverage your own API keys under one roof, ensuring privacy and cost-effectiveness.
+
+## ✨ Key Features
+
+- **Multi-Provider Hub**: Access Google Gemini, OpenAI GPT, Anthropic Claude, and Google Search from a single bot.
+- **Bring Your Own Key (BYOK)**: Securely save your personal API keys for each service. The bot never stores them publicly.
+- **Dynamic Provider Switching**: Instantly change your default AI model with a simple command (e.g., `/def_gemini`).
+- **Persistent Memory**: Uses an SQLite database to remember each user's unique keys and preferences.
+- **Channel Security**: Features a "Force Subscribe" mechanism to ensure only members of your designated channel can use the bot.
+- **Utility Commands**: Includes direct Wikipedia search (`/wikipedia`) and other helpful commands.
+
+## 🛠️ Tech Stack
+
+- **Backend**: Python
+- **Telegram Bot Framework**: `python-telegram-bot`
+- **Database**: `SQLite3`
+- **AI/LLM Libraries**: `google-generativeai`, `openai`, `anthropic`
+- **Other Libraries**: `python-dotenv`, `googlesearch-python`, `wikipedia-api`
+
+## 📸 Demo / Screenshots
+
+Here's the bot in action:
+
+![Bot Welcome Message](https://github.com/thenp26/multi_api_tg_bot/blob/main/assets/welcome.jpg?raw=true)
+![Setting an API Key](https://github.com/thenp26/multi_api_tg_bot/main/assets/set_api.jpg?raw=true)
+![Getting an AI Response](https://github.com/thenp26/multi_api_tg_bot/main/assets/sample_test.jpg?raw=true)
+
+
+## 🚀 Setup and Installation
+
+1.  **Clone the repository:**
+    ```bash
+    git clone [https://github.com/thenp26/multi_api_tg_bot](https://github.com/thenp26/multi_api_tg_bot)
+    cd multi_llm_chat_bot
+    ```
+
+2.  **Create a virtual environment:**
+    ```bash
+    python -m venv venv
+    source venv/bin/activate  # On Windows: .\venv\Scripts\activate
+    ```
+
+3.  **Install the dependencies:**
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+4.  **Create a `.env` file** and add your bot's token and channel username:
+    ```
+    TELEGRAM_TOKEN="YOUR_TELEGRAM_BOT_TOKEN"
+    CHANNEL_USERNAME="@yourchannelusername"
+    ```
+
+5.  **Run the bot:**
+    ```bash
+    python bot.py
+    ```
+
+## 📖 Usage
+
+Interact with the bot on Telegram using the following commands. Use `/help` for a full guide within the bot.
+
+- `/start`: Initializes the bot and shows the welcome message.
+- `/gemini_api <API_KEY>`: Saves your Google Gemini API key.
+- `/def_gemini`: Switches your default provider to Gemini.
+- `/wikipedia <QUERY>`: Searches Wikipedia for a specific query.
+
+## 📄 License
+
+This project is licensed under the MIT License. See the `LICENSE` file for details.
