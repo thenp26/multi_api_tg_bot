@@ -61,7 +61,13 @@ This project was built to create a **single, private, and powerful interface** f
 | **Utilities** | `python-dotenv`, `googlesearch-python`               |
 
 ---
+## 📸 Demo / Screenshots
 
+Here's the bot in action:
+
+![Bot Welcome Message](https://github.com/thenp26/multi_api_tg_bot/blob/main/assets/welcome.jpg?raw=true)
+![Setting an API Key](https://github.com/thenp26/multi_api_tg_bot/blob/main/assets/set_api.jpg?raw=true)
+![Getting an AI Response](https://github.com/thenp26/multi_api_tg_bot/blob/main/assets/sample_test.jpg?raw=true)
 ## 🚀 Getting Started
 
 <details>
@@ -131,3 +137,4 @@ Contributions are welcome! If you have ideas for new features or improvements, f
 ## 📄 License
 
 This project is licensed under the MIT License. See the `LICENSE` file for details.
+
